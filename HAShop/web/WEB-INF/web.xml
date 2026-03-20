@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>controller.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>controller.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>controller.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PlaceOrderServlet</servlet-name>
+        <servlet-class>controller.PlaceOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PlaceOrderServlet</servlet-name>
+        <url-pattern>/place-order</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SearchSuggestServlet</servlet-name>
+        <servlet-class>controller.SearchSuggestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchSuggestServlet</servlet-name>
+        <url-pattern>/search-suggest</url-pattern>
+    </servlet-mapping>
+
+    <!-- ✅ CONTACT -->
+    <servlet>
+        <servlet-name>ContactServlet</servlet-name>
+        <servlet-class>controller.ContactServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContactServlet</servlet-name>
+        <url-pattern>/contact</url-pattern>
+    </servlet-mapping>
+
+    <!-- ADMIN FILTER -->
+    <filter>
+        <filter-name>AdminFilter</filter-name>
+        <filter-class>controller.AdminFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AdminFilter</filter-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </filter-mapping>
+
+    <!-- ADMIN SERVLETS -->
+    <servlet>
+        <servlet-name>AdminProductServlet</servlet-name>
+        <servlet-class>controller.AdminProductServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminProductServlet</servlet-name>
+        <url-pattern>/admin/product</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminOrderServlet</servlet-name>
+        <servlet-class>controller.AdminOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminOrderServlet</servlet-name>
+        <url-pattern>/admin/order</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminNewsServlet</servlet-name>
+        <servlet-class>controller.AdminNewsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminNewsServlet</servlet-name>
+        <url-pattern>/admin/news</url-pattern>
+    </servlet-mapping>
+
+    <!-- ✅ ADMIN MESSAGE -->
+    <servlet>
+        <servlet-name>AdminMessageServlet</servlet-name>
+        <servlet-class>controller.AdminMessageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminMessageServlet</servlet-name>
+        <url-pattern>/admin/message</url-pattern>
+    </servlet-mapping>
+
+</web-app>

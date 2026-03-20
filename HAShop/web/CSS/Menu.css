@@ -1,0 +1,46 @@
+/* Menu (NẰM NGANG) */
+.nav{
+  list-style:none;
+  display:flex;              /* nằm ngang */
+  flex-direction:row;        /* ép ngang */
+  align-items:center;
+  gap:26px;
+  margin:0;
+  padding:0;
+  flex:1;
+  justify-content:center;
+  white-space:nowrap;        /* không xuống dòng */
+}
+.nav li{
+  margin:0;
+  padding:0;
+}
+.nav a{
+  text-decoration:none;
+  color:#111;
+  font-weight:800;
+  letter-spacing:0.4px;
+  padding:8px 10px;
+  border-radius:10px;
+  display:inline-block;
+}
+.nav a:hover{
+  background:#f2f2f2;
+}
+.nav a.active{
+  color:#ff6a00;
+}
+
+/* Responsive menu */
+@media (max-width: 1000px){
+  .nav{
+    gap:16px;
+  }
+}
+@media (max-width: 820px){
+  .nav{
+    justify-content:flex-start;
+    overflow-x:auto;
+    flex:1;
+  }
+}
