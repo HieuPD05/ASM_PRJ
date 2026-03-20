@@ -1,0 +1,72 @@
+/* Wrapper giữ dropdown nằm đúng dưới ô search */
+.ss-wrap{
+  position: relative;
+}
+
+/* dropdown box */
+.ss-dropdown{
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 420px;          /* bạn có thể chỉnh */
+  max-width: 70vw;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* item */
+.ss-item{
+  display:flex;
+  gap:12px;
+  padding:12px;
+  text-decoration:none;
+  color:#111;
+  border-bottom:1px solid #f2f2f2;
+}
+.ss-item:hover{ background:#fafafa; }
+
+.ss-img{
+  width:56px;
+  height:56px;
+  object-fit:contain;
+  border-radius:10px;
+  background:#f7f7f7;
+  flex:0 0 56px;
+}
+
+.ss-info{ min-width:0; }
+.ss-name{
+  font-weight:700;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.ss-price{
+  margin-top:6px;
+  font-weight:800;
+  color:#ff6a00;
+}
+
+/* empty */
+.ss-empty{
+  padding:14px;
+  color:#666;
+}
+
+/* view all */
+.ss-viewall{
+  display:block;
+  padding:12px 14px;
+  text-align:center;
+  font-weight:800;
+  color:#ff6a00;
+  text-decoration:none;
+  background:#fff;
+}
+.ss-viewall:hover{
+  background:#fff7f0;
+}

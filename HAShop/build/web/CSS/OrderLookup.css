@@ -1,0 +1,19 @@
+.ol-page{
+  display:flex;
+  gap:16px;
+  padding:16px 0;
+}
+
+.ol-left{
+  flex:0 0 520px;
+}
+
+.ol-right{
+  flex:1 1 auto;
+}
+
+/* responsive */
+@media (max-width: 1000px){
+  .ol-page{ flex-direction:column; }
+  .ol-left{ flex: 1 1 auto; }
+}

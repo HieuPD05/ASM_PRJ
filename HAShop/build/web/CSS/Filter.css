@@ -1,0 +1,128 @@
+
+
+
+
+/* =====Filter.css gồm (cột trái + radio vuông + màu sắc) ===== */
+/* ===== LEFT FILTER BOX ===== */
+.filter-box{
+  background:#fff;
+  border:1px solid #eee;
+  border-radius:14px;
+  padding:18px;
+  margin-bottom:18px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+}
+.filter-box h3{
+  margin:0 0 14px;
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:0.3px;
+}
+
+.ck{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 0;
+  border-bottom:1px dashed #f2f2f2;
+  font-size:15px;
+  line-height:1.2;
+}
+.ck:last-child{
+  border-bottom:none;
+}
+
+.scroll-list{
+  max-height:240px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  padding-right:6px;
+}
+
+.size-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap:8px 10px;
+}
+.size-grid .ck{
+  border-bottom:none;
+  padding:8px 0;
+  justify-content:flex-start;
+}
+
+/* ===== FILTER: COLOR ===== */
+.color-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);   /* mỗi hàng 3 màu */
+  gap:14px 12px;
+  padding-top:6px;
+}
+
+.color-item{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.color-dot{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  border:1px solid #ddd;
+  cursor:pointer;
+  display:inline-block;
+}
+
+/* màu cụ thể */
+.c-white{ background:#fff; }
+.c-black{ background:#111; border-color:#111; }
+.c-red{ background:#ff2d2d; }
+.c-pink{ background:#ff4fd2; }
+.c-blue{ background:#1e66ff; }
+.c-green{ background:#21c45a; }
+.c-orange{ background:#ff7a00; }
+.c-gray{ background:#bdbdbd; }
+.c-brown{ background:#8b5a2b; }
+
+/* chọn màu (click/keyboard) có viền nổi bật */
+.color-radio{
+  position:absolute;
+  opacity:0;
+  pointer-events:none;
+}
+.color-radio:checked + .color-dot{
+  outline:3px solid rgba(240,90,40,0.35);
+  border-color:#f05a28;
+}
+
+/* ===== RADIO VUÔNG (custom) ===== */
+/* Ẩn radio mặc định */
+.radio-box input[type="radio"]{
+  display:none;
+}
+
+/* Ô vuông giả */
+.radio-box .custom-radio{
+  width:18px;
+  height:18px;
+  border:2px solid #bbb;
+  border-radius:4px;        /* vuông bo nhẹ */
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+/* Khi được chọn */
+.radio-box input[type="radio"]:checked + .custom-radio{
+  border-color:#f05a28;
+  background:#f05a28;
+}
+
+/* Dấu tick */
+.radio-box input[type="radio"]:checked + .custom-radio::after{
+  content:"✔";
+  color:#fff;
+  font-size:12px;
+  line-height:1;
+}
